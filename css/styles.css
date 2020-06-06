@@ -27,7 +27,14 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+.header {
+  position: fixed;
+  width: 100%;
+  min-height: 80px;
+  top: 0px;
+  left: 0px;
+  background-color: var(--white-color);
+}
 .header .container {
   display: flex;
   align-items: center;
@@ -44,9 +51,11 @@ body {
   color: var(--color-of-second-text);
   background-color: var(--white-color);
   font-family: roboto, sans-serif;
+  padding-top: 80px;
 
   margin: 0px;
 }
+
 ul {
   list-style: none;
 }
@@ -411,9 +420,16 @@ button {
   display: flex;
   padding: 0px;
   margin: 0px;
+  position: relative;
 }
 .feathure-title img {
   display: block;
+}
+
+.feathure-title p {
+  position: absolute;
+  bottom: 0px;
+  width: 370px;
 }
 .feathure-title .item {
   min-width: 370px;
@@ -445,6 +461,22 @@ h1 {
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 20px;
+}
+
+.projects .items::before {
+  display: inline-block;
+  content: "";
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 294px;
+  opacity: 0;
+  position: absolute;
+}
+.projects .items:hover::before {
+  opacity: 1;
 }
 .projects .items:hover,
 .projects .items:focus {
@@ -461,24 +493,40 @@ h1 {
 .projects img {
   margin-bottom: 20px;
   width: 368px;
+  height: 294px;
+  cou
 }
 .first-paragraf {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+  padding-left: 24px;
 }
 .second-paragraf {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
+  position: absolute;
+  /*top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  top: 63px;
+  left: 24px;
+  right: 24px;
+  opacity: 0;
+}
+.projects .items:hover .second-paragraf {
+  opacity: 1;
+  color: var(--white-color)
 }
 .projects h3 {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  padding-left: 24px;
 }
 .section.feathure {
   padding-top: 94px;
@@ -599,6 +647,8 @@ h1 {
 .logotips {
   display: flex;
   justify-content: space-evenly;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .section.team .own-name {
   text-align: center;
