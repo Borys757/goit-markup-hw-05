@@ -502,6 +502,7 @@ h1 {
   position: relative;
   cursor: pointer;
   padding-bottom: 20px;
+  overflow: hidden;
 }
 
 .projects .items::before {
@@ -509,17 +510,20 @@ h1 {
   content: "";
   width: 100%;
   height: 294px;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
+  transform: translateY(500px);
+  background-color: rgba(33, 150, 243, 0.9);
 }
 
-.projects .items:hover::before {
+/*.projects .items:hover::before {
   opacity: 1;
   background-color: rgba(33, 150, 243, 0.9);
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  transform: translateY(100px);
+}*/
 
 .projects .items:hover,
 .projects .items:focus {
