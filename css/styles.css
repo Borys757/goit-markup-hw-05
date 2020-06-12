@@ -503,6 +503,7 @@ h1 {
   padding-bottom: 20px;
   position: relative;
 }
+
 .projects div {
   display: inline-block;
   position: relative;
@@ -518,10 +519,11 @@ h1 {
   width: 368px;
   height: 294px;
   position: absolute;
-  transform: translateY(299px);
+  transform: translateY(100%);
 }
 
-.projects div:hover::before {
+.projects div:hover::before,
+.projects div:focus::before {
   background-color: rgba(33, 150, 243, 0.9);
 
   transition-property: background-color;
@@ -567,7 +569,8 @@ h1 {
   transform: translateY(299px);
   transition-property: color;
 }
-.projects div:hover .second-paragraf {
+.projects div:hover .second-paragraf,
+.projects div:focus .second-paragraf {
   color: var(--white-color);
   transform: translateY(0px);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
