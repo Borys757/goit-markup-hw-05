@@ -499,31 +499,35 @@ h1 {
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
-  position: relative;
   cursor: pointer;
   padding-bottom: 20px;
-  overflow: hidden;
+  position: relative;
 }
-
-.projects .items::before {
+.projects div {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  height: 294px;
+}
+.projects div::before {
   display: inline-block;
   content: "";
-  width: 100%;
-  height: 294px;
-  opacity: 1;
-  position: absolute;
-  transform: translateY(500px);
   background-color: rgba(33, 150, 243, 0.9);
+  width: 368px;
+  height: 294px;
+  position: absolute;
+  transform: translateY(299px);
 }
 
-/*.projects .items:hover::before {
-  opacity: 1;
+.projects div:hover::before {
   background-color: rgba(33, 150, 243, 0.9);
+
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(100px);
-}*/
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0px);
+}
 
 .projects .items:hover,
 .projects .items:focus {
@@ -538,7 +542,6 @@ h1 {
 }
 
 .projects img {
-  margin-bottom: 20px;
   width: 368px;
   height: 294px;
 }
@@ -561,15 +564,13 @@ h1 {
   top: 63px;
   left: 24px;
   right: 24px;
-  opacity: 0;
-
+  transform: translateY(299px);
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects .items:hover .second-paragraf {
-  opacity: 1;
+.projects div:hover .second-paragraf {
   color: var(--white-color);
+  transform: translateY(0px);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects h3 {
   font-weight: bold;
