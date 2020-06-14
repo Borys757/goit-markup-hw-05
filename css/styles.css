@@ -35,6 +35,7 @@ html {
   top: 0px;
   left: 0px;
   background-color: var(--white-color);
+  border-bottom: 1px solid #ececec;
 }
 .header .container {
   display: flex;
@@ -511,6 +512,7 @@ h1 {
   margin: 0px;
   padding: 0px;
   height: 294px;
+  margin-bottom: 20px;
 }
 .projects div::before {
   display: inline-block;
@@ -545,6 +547,7 @@ h1 {
 }
 
 .projects img {
+  display: block;
   width: 368px;
   height: 294px;
 }
@@ -872,7 +875,7 @@ footer {
   padding-left: 0px;
 }
 .connect-icon .icon + .icon {
-  margin-left: 34px;
+  margin-left: 10px;
 }
 
 .connect b {
